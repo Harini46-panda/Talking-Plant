@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+package sensor;
+
+message SensorData {
+  bool motion = 1;
+  bool gas = 2;
+  float temperature = 3;
+  float humidity = 4;
+}

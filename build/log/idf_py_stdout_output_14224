@@ -1,0 +1,106 @@
+�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15748
+load:0x40080400,len:4
+ho 8 tail 4 room 4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (31) boot: ESP-IDF v5.4.1 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Jun 12 2025 12:19:51[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (32) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (42) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (46) boot: Enabling RNG early entropy source...[0m
+[0;32mI (50) boot: Partition Table:[0m
+[0;32mI (53) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (59) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (66) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (72) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (79) boot: End of partition table[0m
+[0;32mI (82) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09c6ch ( 40044) map[0m
+[0;32mI (103) esp_image: segment 1: paddr=00019c94 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (104) esp_image: segment 2: paddr=00019cb8 vaddr=3ffb0000 size=02314h (  8980) load[0m
+[0;32mI (111) esp_image: segment 3: paddr=0001bfd4 vaddr=40080000 size=04044h ( 16452) load[0m
+[0;32mI (121) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=13d64h ( 81252) map[0m
+[0;32mI (150) esp_image: segment 5: paddr=00033d8c vaddr=40084044 size=08bf0h ( 35824) load[0m
+[0;32mI (170) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (171) boot: Disabling RNG early entropy source...[0m
+[0;32mI (181) cpu_start: Multicore app[0m
+[0;32mI (189) cpu_start: Pro cpu start user code[0m
+[0;32mI (189) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (189) app_init: Application information:[0m
+[0;32mI (189) app_init: Project name:     plant_dht_sensor[0m
+[0;32mI (194) app_init: App version:      1[0m
+[0;32mI (198) app_init: Compile time:     Jun 12 2025 12:16:03[0m
+[0;32mI (203) app_init: ELF file SHA256:  e04bf08f2...[0m
+[0;32mI (207) app_init: ESP-IDF:          v5.4.1[0m
+[0;32mI (211) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (215) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (219) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (223) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (229) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (234) heap_init: At 3FFB2BD0 len 0002D430 (181 KiB): DRAM[0m
+[0;32mI (239) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (244) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (250) heap_init: At 4008CC34 len 000133CC (76 KiB): IRAM[0m
+[0;32mI (257) spi_flash: detected chip: generic[0m
+[0;32mI (259) spi_flash: flash io: dio[0m
+[0;32mI (263) main_task: Started on CPU0[0m
+[0;32mI (273) main_task: Calling app_main()[0m
+[0;32mI (273) SMART_PLANT: 🌱 Smart Talking Plant Started[0m
+[0;32mI (273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (293) SMART_PLANT: 🌡️ Temp: 25.3°C, 💧 Humidity: 78.1%[0m
+[0;32mI (293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (293) main_task: Returned from app_main()[0m
+[0;32mI (2273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (2293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (3313) SMART_PLANT: 🌡️ Temp: 25.3°C, 💧 Humidity: 77.8%[0m
+[0;32mI (4273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (4293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (6273) SMART_PLANT: 🤖 Motion Detected![0m
+[0;32mI (6293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (6333) SMART_PLANT: 🌡️ Temp: 25.4°C, 💧 Humidity: 77.5%[0m
+[0;32mI (8273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (8293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (9353) SMART_PLANT: 🌡️ Temp: 25.3°C, 💧 Humidity: 78.0%[0m
+[0;32mI (10273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (10293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (12273) SMART_PLANT: 🤖 Motion Detected![0m
+[0;32mI (12293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (12373) SMART_PLANT: 🌡️ Temp: 25.3°C, 💧 Humidity: 77.6%[0m
+[0;32mI (14273) SMART_PLANT: 🤖 Motion Detected![0m
+[0;32mI (14293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (15393) SMART_PLANT: 🌡️ Temp: 25.4°C, 💧 Humidity: 77.7%[0m
+[0;32mI (16273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (16293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (18273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (18293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (18413) SMART_PLANT: 🌡️ Temp: 25.5°C, 💧 Humidity: 77.8%[0m
+[0;32mI (20273) SMART_PLANT: 🤖 Motion Detected![0m
+[0;32mI (20293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (21433) SMART_PLANT: 🌡️ Temp: 25.4°C, 💧 Humidity: 78.2%[0m
+[0;32mI (22273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (22293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (24273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (24293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (24453) SMART_PLANT: 🌡️ Temp: 25.6°C, 💧 Humidity: 78.9%[0m
+[0;32mI (26273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (26293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (27473) SMART_PLANT: 🌡️ Temp: 25.6°C, 💧 Humidity: 78.7%[0m
+[0;32mI (28273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (28293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (30273) SMART_PLANT: 🤖 Motion Detected![0m
+[0;32mI (30293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (30493) SMART_PLANT: 🌡️ Temp: 25.6°C, 💧 Humidity: 78.4%[0m
+[0;32mI (32273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (32293) SMART_PLANT: ✅ Air is Clean[0m
+[0;32mI (33513) SMART_PLANT: 🌡️ Temp: 25.7°C, 💧 Humidity: 78.0%[0m
+[0;32mI (34273) SMART_PLANT: 😴 No Motion[0m
+[0;32mI (34293) SMART_PLANT: ✅ Air is Clean[0m
