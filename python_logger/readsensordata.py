@@ -5,7 +5,7 @@ from mcap.reader import make_reader
 MCAP_FILE = "sensor_data.mcap" # The name of the MCAP file to read
 
 # === READ DATA FROM MCAP FILE ===
-print(f"📖 Attempting to read data from MCAP file: {MCAP_FILE}\n")
+print(f" Attempting to read data from MCAP file: {MCAP_FILE}\n")
 
 try:
     # Open the MCAP file in binary read mode ('rb')
@@ -46,10 +46,10 @@ try:
         if message_count == 0:
             print("No messages found in the MCAP file.")
         else:
-            print(f"\n✅ Successfully read {message_count} messages from {MCAP_FILE}.")
+            print(f"\n Successfully read {message_count} messages from {MCAP_FILE}.")
 
 except FileNotFoundError:
-    print(f"❌ Error: The file '{MCAP_FILE}' was not found. Please ensure it exists and the path is correct.")
+    print(f" Error: The file '{MCAP_FILE}' was not found. Please ensure it exists and the path is correct.")
 except Exception as e:
-    print(f"❌ An unexpected error occurred while reading the MCAP file: {e}")
+    print(f"An unexpected error occurred while reading the MCAP file: {e}")
 
