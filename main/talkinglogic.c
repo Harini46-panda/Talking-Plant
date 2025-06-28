@@ -13,9 +13,9 @@ void pir_sensor_task(void *pvParameter) {
     while (1) {
         int level = gpio_get_level(PIR_SENSOR_GPIO);
         if (level == 1) {
-            ESP_LOGI(TAG, "🌿 Motion Detected! Somebody here? I’m so glad to see you.");
+            ESP_LOGI(TAG, " Motion Detected! Somebody here? I’m so glad to see you.");
         } else {
-            ESP_LOGI(TAG, "😴 No Motion. I guess I'm alone again.");
+            ESP_LOGI(TAG, " No Motion. I guess I'm alone again.");
         }
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
@@ -30,18 +30,18 @@ void dht_sensor_task(void *pvParameter) {
             float temp = temperature / 10.0;
             float hum = humidity / 10.0;
 
-            ESP_LOGI(TAG, "🌡️ Temp: %.1f°C, 💧 Humidity: %.1f%%", temp, hum);
+            ESP_LOGI(TAG, " Temp: %.1f°C,  Humidity: %.1f%%", temp, hum);
 
             if (temp < 20.0) {
-                ESP_LOGI(TAG, "❄️ It's quite chilly today. Stay warm!");
+                ESP_LOGI(TAG, " It's quite chilly today. Stay warm!");
             } else if (temp >= 20.0 && temp <= 30.0) {
-                ESP_LOGI(TAG, "😊 Such a pleasant weather. I'm feeling great!");
+                ESP_LOGI(TAG, " Such a pleasant weather. I'm feeling great!");
             } else {
-                ESP_LOGI(TAG, "🔥 It's really hot! I hope you're staying hydrated.");
+                ESP_LOGI(TAG, " It's really hot! I hope you're staying hydrated.");
             }
 
         } else {
-            ESP_LOGE(TAG, "⚠️ Failed to read DHT22 sensor.");
+            ESP_LOGE(TAG, " Failed to read DHT22 sensor.");
         }
         vTaskDelay(pdMS_TO_TICKS(3000));
     }
@@ -52,16 +52,16 @@ void gas_sensor_task(void *pvParameter) {
     while (1) {
         int gas_level = gpio_get_level(GAS_SENSOR_GPIO);
         if (gas_level == 1) {
-            ESP_LOGW(TAG, "⚠️ Gas Detected! Be careful!");
+            ESP_LOGW(TAG, " Gas Detected! Be careful!");
         } else {
-            ESP_LOGI(TAG, "✅ Air is fresh and clean.");
+            ESP_LOGI(TAG, " Air is fresh and clean.");
         }
         vTaskDelay(pdMS_TO_TICKS(2000));
     }
 }
 void app_main(void) {
-    ESP_LOGI(TAG, "🌱 Hello! I am your Smart Talking Plant.");
-    ESP_LOGI(TAG, "💬 Ready to sense and speak! Let's grow together! 🌼");
+    ESP_LOGI(TAG, " Hello! I am your Smart Talking Plant.");
+    ESP_LOGI(TAG, "Ready to sense and speak! Let's grow together! ");
     xTaskCreate(pir_sensor_task, "PIR Task", 2048, NULL, 5, NULL);
     xTaskCreate(dht_sensor_task, "DHT22 Task", 2048, NULL, 5, NULL);
     xTaskCreate(gas_sensor_task, "Gas Task", 2048, NULL, 5, NULL);
