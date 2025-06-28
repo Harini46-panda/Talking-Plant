@@ -86,12 +86,9 @@ void gas_sensor_task(void *pvParameter) {
         vTaskDelay(pdMS_TO_TICKS(4000));
     }
 }
-
-// ================= app_main ===================
 void app_main(void) {
     ESP_LOGI(TAG, "Smart Talking Plant Starting...");
     dfplayer_init();
-
     xTaskCreate(pir_sensor_task, "PIR Task", 2048, NULL, 5, NULL);
     xTaskCreate(dht_sensor_task, "DHT Task", 2048, NULL, 5, NULL);
     xTaskCreate(gas_sensor_task, "Gas Task", 2048, NULL, 5, NULL);
